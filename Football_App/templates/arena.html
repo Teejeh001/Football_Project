@@ -1,0 +1,84 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="arenas-section">
+  <div class="arenas-header">
+    <h1>Explore Football Arenas</h1>
+    <p>Find the perfect arena for your next match or event.</p>
+  </div>
+
+  <!-- Search and Filter -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search arena name or location..." />
+    <select>
+      <option>All Locations</option>
+      <option>Lagos</option>
+      <option>Abuja</option>
+      <option>Kano</option>
+      <option>Port Harcourt</option>
+      <option>Yobe</option>
+      <option>kaduna</option>
+      <option>Borno</option>
+    </select>
+    <button class="btn-primary">Search</button>
+  </div>
+
+  <!-- Arena Cards -->
+  <div class="arena-grid">
+    <div class="arena-card">
+      <img src="{% static 'images/arena1.jpg' %}" alt="Arena 1" />
+      <div class="arena-info">
+        <h3>Green Turf Arena</h3>
+        <p class="location">📍 Lagos</p>
+        <p class="price">₦10,000 / hour</p>
+        <a href="{% url 'booking' %}" class="btn-primary">Book Now</a>
+      </div>
+    </div>
+
+    <div class="arena-card">
+      <img src="{% static 'images/arena2.jpg' %}" alt="Arena 2" />
+      <div class="arena-info">
+        <h3>City Sports Arena</h3>
+        <p class="location">📍 Abuja</p>
+        <p class="price">₦8,500 / hour</p>
+        <a href="{% url 'booking' %}" class="btn-primary">Book Now</a>
+      </div>
+    </div>
+
+    <div class="arena-card">
+      <img src="{% static 'images/arena3.jpg' %}" alt="Arena 3" />
+      <div class="arena-info">
+        <h3>Elite Football Park</h3>
+        <p class="location">📍 Kano</p>
+        <p class="price">₦15,000 / hour</p>
+        <a href="{% url 'booking' %}" class="btn-primary">Book Now</a>
+      </div>
+    </div>
+    <div class="arena-card">
+      <img src="{% static 'images/arena4.jpg' %}" alt="Arena 3" />
+      <div class="arena-info">
+        <h3>Miyatti Sports Arena</h3>
+        <p class="location">📍 Yobe</p>
+        <p class="price">₦12,000 / hour</p>
+        <a href="{% url 'booking' %}" class="btn-primary">Book Now</a>
+      </div>
+    </div>
+    <div class="arena-card">
+      <img src="{% static 'images/arena5.jpg' %}" alt="Arena 3" />
+      <div class="arena-info">
+        <h3>Galaxy Arena</h3>
+        <p class="location">📍 kaduna</p>
+        <p class="price">₦10,000 / hour</p>
+        <a href="{% url 'booking' %}" class="btn-primary">Book Now</a>
+      </div>
+    </div>
+    <div class="arena-card">
+      <img src="{% static 'images/arena6.jpg' %}" alt="Arena 3" />
+      <div class="arena-info">
+        <h3>El-kanemi Football Park</h3>
+        <p class="location">📍 Borno</p>
+        <p class="price">₦11,000 / hour</p>
+        <a href="{% url 'booking' %}" class="btn-primary">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

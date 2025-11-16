@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Football Arena Booking{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <!-- 🌟 Header (Navbar) -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">⚽ Football Arena</div>
+        <ul class="nav-links">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="">Dashboard</a></li>
+          <li><a href="#">Bookings</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 🧩 Dynamic content goes here -->
+    <main>{% block content %} {% endblock %}</main>
+
+    <!-- ⚙️ Footer -->
+    <footer>
+      <p>© 2025 Football Arena Booking System. All rights reserved.</p>
+      <p>Developed by Teejeh 💻</p>
+    </footer>
+  </body>
+</html>

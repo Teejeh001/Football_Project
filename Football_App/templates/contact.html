@@ -1,0 +1,78 @@
+{% extends "base.html" %}{% load static %}
+
+
+  <body>
+    {% block content %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+
+    <section class="contact-section">
+      <div class="contact-header">
+        <h1>📞 Contact <span>Us</span></h1>
+        <p>
+          We’d love to hear from you! Get in touch for bookings, events, or
+          support.
+        </p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <form action="#" method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Our Information</h2>
+          <p><strong>📍 Address:</strong> Miyatti Sport Arena, Yobe, Nigeria</p>
+          <p><strong>📧 Email:</strong> abbatj86@gmail.com</p>
+          <p><strong>📞 Phone:</strong> +234 9162 260 134</p>
+
+          <div class="contact-links">
+            <a
+              href="https://wa.me/2349162260134"
+              class="whatsapp"
+              target="_blank"
+              >💬 Chat on WhatsApp</a
+            >
+            <a href="mailto:support@arenabooking.com" class="email"
+              >📩 Send an Email</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional Map -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.313248035991!2d3.367123915312509!3d6.601838924050498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93f6ef40345d%3A0xe8ffcd7b4a9f8a8!2sLagos%20City!5e0!3m2!1sen!2sng!4v1697820000000!5m2!1sen!2sng"
+          width="100%"
+          height="350"
+          style="border: 0; border-radius: 10px"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    {% endblock %}
+  </body>
+</html>

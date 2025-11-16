@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Arena Booking</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    {% block content %}
+
+    <section class="about-container">
+      <div class="about-hero">
+        <h1>About <span>ArenaBooking</span></h1>
+        <p>
+          Your trusted platform for booking arenas, events, and halls with ease.
+        </p>
+      </div>
+
+      <div class="about-content">
+        <div class="mission">
+          <h2>🎯 Our Mission</h2>
+          <p>
+            To make arena and event booking seamless, accessible, and enjoyable.
+            We connect people to the best venues for games, sports, and social
+            gatherings.
+          </p>
+        </div>
+
+        <div class="services">
+          <h2>💼 What We Offer</h2>
+          <ul>
+            <li>⚽ Book sports arenas for matches and tournaments.</li>
+            <li>🎮 Discover gaming lounges and e-sports centers.</li>
+            <li>🎉 Hire halls for events, parties, or business meetings.</li>
+            <li>💳 Secure online booking and instant confirmation.</li>
+          </ul>
+        </div>
+
+        <div class="team">
+          <h2>👥 Our Team</h2>
+          <p>
+            We’re a passionate group of tech enthusiasts and event lovers
+            committed to helping you find the perfect space — every time.
+          </p>
+        </div>
+
+        <div class="cta-section">
+          <h3>Ready to experience the future of arena booking?</h3>
+          <a href="{% url 'arena' %}" class="btn-primary">Explore Arenas</a>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

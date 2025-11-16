@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'static/css/style.css' %}" />
+  <body>
+    
+
+    <section class="profile-section">
+      <div class="profile-container">
+        <div class="profile-header">
+          <img
+            src="{% static 'images/avatar.png' %}"
+            alt="User Avatar"
+            class="profile-avatar"
+          />
+          <h2>{{ user.username|title }}</h2>
+          <p>{{ user.email }}</p>
+        </div>
+
+        <div class="profile-info">
+          <h3>Profile Details</h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <strong>Full Name:</strong>
+              <span>{{ user.get_full_name }}</span>
+            </div>
+            <div class="info-item">
+              <strong>Username:</strong>
+              <span>{{ user.username }}</span>
+            </div>
+            <div class="info-item">
+              <strong>Email:</strong>
+              <span>{{ user.email }}</span>
+            </div>
+            <div class="info-item">
+              <strong>Phone:</strong>
+              <span>{{ user.profile.phone|default:"Not set" }}</span>
+            </div>
+            <div class="info-item">
+              <strong>Address:</strong>
+              <span>{{ user.profile.address|default:"Not provided" }}</span>
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <a href="" class="btn-primary"
+              >Edit Profile</a
+            >
+            <a href="{% url 'dashboard' %}" class="btn-secondary"
+              >Back to Dashboard</a
+            >
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <h3>Booking Overview</h3>
+          <div class="stats-cards">
+            <div class="card">
+              <h4>Total Bookings</h4>
+              <p>{{ total_bookings|default:"0" }}</p>
+            </div>
+            <div class="card">
+              <h4>Pending Payments</h4>
+              <p>{{ pending_payments|default:"0" }}</p>
+            </div>
+            <div class="card">
+              <h4>Completed</h4>
+              <p>{{ completed_bookings|default:"0" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     {% endblock %}
+  </body>
+</html>

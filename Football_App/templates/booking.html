@@ -1,0 +1,72 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="booking-section">
+  <div class="booking-container">
+    <div class="booking-header">
+      <h1>Book Your Football Arena</h1>
+      <p>
+        Choose your arena, select your date & time, and confirm your booking
+        easily.
+      </p>
+    </div>
+
+    <!-- Booking Form -->
+    <form method="POST" class="booking-form">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="arena">Select Arena</label>
+        <select id="arena" name="arena" required>
+          <option value="">-- Choose Arena --</option>
+          <option value="green_turf">Green Turf Arena</option>
+          <option value="city_sports">City Sports Arena</option>
+          <option value="elite_park">Elite Football Park</option>
+          <option value="elite_park">Miyatti Sports Arena</option>
+          <option value="elite_park">Galaxy Arena</option>
+          <option value="elite_park">El-kanemi Football Park</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Choose Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="time">Choose Time</label>
+        <input type="time" id="time" name="time" required />
+      </div>
+
+      <div class="form-group">
+        <label for="duration">Duration (Hours)</label>
+        <input
+          type="number"
+          id="duration"
+          name="duration"
+          min="1"
+          max="8"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="payment">Payment Option</label>
+        <select id="payment" name="payment" required>
+          <option value="">-- Select Payment Option --</option>
+          <option value="card">Pay with Card</option>
+          <option value="cash">Pay on Arrival</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-primary">Confirm Booking</button>
+    </form>
+
+    <!-- Booking Image -->
+    <div class="booking-image">
+      <img
+        src="{% static 'images/booking-banner.jpg' %}"
+        alt="Booking Football Arena"
+      />
+    </div>
+  </div>
+</section>
+{% endblock %}

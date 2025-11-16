@@ -1,0 +1,74 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'static/css/style.css' %}" />
+  <body>
+    <section class="payment-section">
+      <div class="payment-container">
+        <div class="payment-header">
+          <h1>💳 Secure Payment</h1>
+          <p>Complete your booking by making a secure online payment.</p>
+        </div>
+
+        <form method="POST" class="payment-form">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label>Full Name</label>
+            <input
+              type="text"
+              name="full_name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Booking ID</label>
+            <input
+              type="text"
+              name="booking_id"
+              placeholder="Enter your booking reference"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Payment Method</label>
+            <select name="payment_method" required>
+              <option value="">Select Payment Method</option>
+              <option value="card">Credit / Debit Card</option>
+              <option value="bank">Bank Transfer</option>
+              <option value="wallet">Wallet / Paystack</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Amount</label>
+            <input
+              type="number"
+              name="amount"
+              placeholder="Enter amount (₦)"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-primary">Proceed to Pay</button>
+
+          <p class="switch-link">
+            <a href="{% url 'dashboard' %}">⬅ Back to Dashboard</a>
+          </p>
+        </form>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Home - Football
+Arena{% endblock %} {% block content %}
+<section class="hero">
+  <h1>Welcome to Football Arena Booking</h1>
+  <p>Book your favorite arena anytime, anywhere.</p>
+  <a href="#" class="btn">Book Now</a>
+</section>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Book Your Favorite Football Arena With Ease</h1>
+    <p>
+      Fast, reliable, and secure arena booking system for football lovers and
+      event organizers.
+    </p>
+    <div class="hero-buttons">
+      <a href="{% url 'arena' %}" class="btn-primary">View Arenas</a>
+      <a href="{% url 'login' %}" class="btn-secondary">Login / Signup</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="{% static 'images/football.jpg' %}" alt="Football Field" />
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+  <h2>Why Choose Us?</h2>
+  <div class="features-container">
+    <div class="feature-card">
+      <img src="{% static 'images/booking.jpg' %}" alt="Booking" />
+      <h3>Easy Booking</h3>
+      <p>Book your preferred arena in just a few clicks — anytime, anywhere.</p>
+    </div>
+    <div class="feature-card">
+      <img src="{% static 'images/payment.jpg' %}" alt="Payment" />
+      <h3>Secure Payment</h3>
+      <p>
+        Safe and trusted payment system to keep your transactions protected.
+      </p>
+    </div>
+    <div class="feature-card">
+      <img src="{% static 'images/birthday.jpg' %}" alt="Payment" />
+      <h3>Birthday</h3>
+      <p>A social gathering to celebrate the anniversary of someone's birth</p>
+    </div>
+    <div class="feature-card">
+      <img src="{% static 'images/event.jpg' %}" alt="Event" />
+      <h3>Host Events</h3>
+      <p>
+        Book arenas for matches, tournaments, or even private events and
+        parties.
+      </p>
+    </div>
+    <div class="feature-card">
+      <img src="{% static 'images/wedding.jpg' %}" alt="Payment" />
+      <h3>Marriage</h3>
+      <p>A ceremony where two people are united in marriage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVER SECTION -->
+<section class="discover">
+  <div class="discover-content">
+    <h2>Discover New Games & Events</h2>
+    <p>
+      Stay updated with the latest matches, tournaments, and community events
+      happening near you.
+    </p>
+    <a href="{% url 'arena' %}" class="btn-primary">Explore Now</a>
+  </div>
+</section>
+{% endblock %}

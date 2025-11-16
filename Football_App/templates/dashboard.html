@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'static/css/style.css' %}" />
+<section class="dashboard">
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="{% url 'dashboard' %}" class="active">🏠 Overview</a></li>
+        <li><a href="{% url 'booking' %}">📅 My Bookings</a></li>
+        <li><a href="{% url 'arena' %}">⚽ Arenas</a></li>
+        <li><a href="{% url 'payment' %}">💳 Payments</a></li>
+        <li><a href="{% url 'profile' %}">👤 Profile</a></li>
+        <li><a href="">🚪 Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h1>Welcome, {{ user.username|default:"Guest" }}!</h1>
+      <p>Manage your bookings, view payments, and explore new arenas.</p>
+
+      <div class="dashboard-cards">
+        <div class="card">
+          <h3>Total Bookings</h3>
+          <p>12</p>
+        </div>
+        <div class="card">
+          <h3>Upcoming Match</h3>
+          <p>Sat, 16 Nov 2025</p>
+        </div>
+        <div class="card">
+          <h3>Payments Completed</h3>
+          <p>₦45,000</p>
+        </div>
+        <div class="card">
+          <h3>New Arena Deals</h3>
+          <p>3 Available</p>
+        </div>
+      </div>
+
+      <div class="dashboard-actions">
+        <a href="{% url 'booking' %}" class="btn-primary">Book New Arena</a>
+        <a href="{% url 'arena' %}" class="btn-secondary">Explore Arenas</a>
+      </div>
+    </main>
+  </div>
+</section>
+{% endblock %}
