@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Shared Form Section (Booking, Login, Signup) */
+.form-section {
+  background: #f8f9fc;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.form-header h1 {
+  color: #004aad;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.form-header p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.booking-form .form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus {
+  border-color: #004aad;
+}
+
+.btn-primary {
+  width: 100%;
+  background: #004aad;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #003580;
+}
+
+.switch-link {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.switch-link a {
+  color: #004aad;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch-link a:hover {
+  color: #ffd700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 35px 25px;
+  }
+  .form-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Contact Page */
+.contact-section {
+  padding: 80px 20px;
+  background: #f8f9fc;
+  color: #222;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  color: #004aad;
+}
+
+.contact-header span {
+  color: #ffd700;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h2,
+.contact-info h2 {
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #004aad;
+  outline: none;
+}
+
+.contact-links {
+  margin-top: 20px;
+}
+
+.contact-links a {
+  display: block;
+  margin-bottom: 10px;
+  color: #004aad;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #ffd700;
+}
+
+.map-container {
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-form, .contact-info {
+    width: 100%;
+  }
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+.logout-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.logout-actions a {
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.logout-actions a:hover {
+  transform: translateY(-3px);
+}
